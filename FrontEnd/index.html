@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+		<style>
+			html, body, #map-canvas {
+			height: 100%;
+			margin: 0px;
+			padding: 0px
+		}
+		</style>
+		<title> TweetMap! </title>
+		
+		<!--&signed_in=true -->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+		
+		<script src = "js/jquerylib.js"></script>
+ 
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		
+		<script src ="js/jsmagic.js"></script>
+		
+		<script src = "js/mc.js"></script>
+		
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">TweetMap</a>
+	  <p class="navbar-text"><a href="heatmap.html" class="navbar-link">Heat Map</a></p>
+	  <p class="navbar-text navbar-right"><a href="facup.html" class="navbar-link">FA Cup #MUFCvsAFC</a></p>
+    </div>	  
+	  
+	  <!-- Search box and dropdown --> 
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="#Hashtag" id ="input_keyword">
+        </div>
+        <button type="button" id = "mapbutton" class="btn btn-primary">Map It</button>
+		<span class="glyphicon glyphicon-info-sign" data-toggle="info" data-placement="bottom" style="font-size: 18px" title="Developed by: Shashank Ghatage (ssg383@nyu.edu) NYU School of Engineering"></span>
+		</form>
+	  
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">#Hashtag<span class="caret"></span></a>
+          
+		  <ul class="dropdown-menu" role="menu" id ="topic">
+			<li><a href="#">#India</a></li>
+			<li><a href="#">#Music</a></li>
+			<li><a href="#">#Man Utd</a></li>
+			<li><a href="#">#Snow</a></li>            
+			<li><a href="#">#Apple</a></li>
+            <li><a href="#">#NYC</a></li>
+			<li><a href="#">#WCW</a></li>
+			<li><a href="#">#CWC15</a></li>
+			<li><a href="#">#Sleep</a></li>
+			<li><a href="#">#Friend</a></li>
+			<li><a href="#">#Team</a></li>
+			<li><a href="#">#Party</a></li>
+			<li><a href="#">#Love</a></li>
+			<li><a href="#">#Girl</a></li>
+			<li><a href="#">#Weather</a></li>
+			<li><a href="#">#Food</a></li>
+			<li><a href="#">#Night</a></li>
+			<li><a href="#">#God</a></li>
+			<li><a href="#">#BAN</a></li>
+			<li><a href="#">#Game</a></li>
+            
+			<li class="divider"></li>
+            <li><a href="#">#GoBazinga!</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="map-canvas"></div>
+
+</body>
+</html>

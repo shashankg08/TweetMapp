@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Heatmap</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+    
+		<!-- Import Heat Map Lib-->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+		
+		<script src = "js/mc.js"></script>
+		<script src = "js/fa_heatscript.js"></script>
+		
+		<script src = "js/jquerylib.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	</head>
+
+  <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">TweetMap</a>
+	  <p class="navbar-text"><a href="facup.html" class="navbar-link">FA Cup Tweet Map</a></p> 
+	  <p class="navbar-text navbar-right"><a href="facup.html" class="navbar-link">FA Cup #MUFCvAFC</a></p>
+    </div>	  
+	  
+	  <!-- Search box and dropdown --> 
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="#Hashtag" id ="input_keyword">
+        </div>
+        <button type="button" id = "mapbutton" class="btn btn-primary">Map It</button>
+		<span class="glyphicon glyphicon-info-sign" data-toggle="info" data-placement="bottom" style="font-size: 18px" title="Developed by: Shashank Ghatage (ssg383@nyu.edu) NYU School of Engineering"></span>
+      </form>
+	  
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">#Hashtag<span class="caret"></span></a>
+          
+		  <ul class="dropdown-menu" role="menu" id = "topic">
+			<li><a href="#">#MUFCvAFC</a></li>
+			<li><a href="#">#MUFC</a></li>
+			<li><a href="#">#ManUtd</a></li>
+			<li><a href="#">#Arsenal</a></li>            
+			<li><a href="#">#FA Cup</a></li>
+            <li><a href="#">#AFC</a></li>
+			<li><a href="#">#2-1</a></li>
+			<li><a href="#">#Van Gaal</a></li>
+			<li><a href="#">#Wenger</a></li>
+			<li><a href="#">#Di Maria</a></li>
+			<li><a href="#">#Welbeck</a></li>
+			<li><a href="#">#Reds</a></li>
+			<li><a href="#">#Rooney</a></li>
+			<li><a href="#">#De Gea</a></li>
+			<li><a href="#">#Gooners</a></li>
+			<li><a href="#">#Wembley</a></li>
+			<li><a href="#">#Liverpool</a></li>
+			<li><a href="#">#Cup</a></li>
+			<li><a href="#">#Apple</a></li>
+			
+			<li class="divider"></li>
+            <li><a href="#">#GoBazinga!</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- G's-->
+    <div id="panel">
+      <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+      <button onclick="changeGradient()">Change gradient</button>
+      <button onclick="changeRadius()">Change radius</button>
+      <!--<button onclick="changeOpacity()">Change opacity</button> -->
+    </div>
+    <div id="map-canvas"></div>
+  </body>
+</html>
+
