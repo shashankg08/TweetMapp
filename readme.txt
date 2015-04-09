@@ -8,6 +8,6 @@ FrontEnd: Based on user input, all corresponding tweets are collected from db an
 
 Cloud components used: 
 AWS RDS (cloud database) 
-AWS ElascticBeanStalk (host app, load balancing, monitoring) 
+AWS ElasticBeanStalk (host app, load balancing, monitoring) 
 AWS EC2 (web server) 
 AWS CloudWatch (monitor cloud resources)
